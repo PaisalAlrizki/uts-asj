@@ -1,19 +1,23 @@
-# UTS Administrasi Sistem Jaringan 2026
-Aplikasi CRUD User berbasis Microservices dengan Docker Compose.
+Tugas UTS Administrasi Sistem Jaringan - Genap 2026
+Nama: Paisal Alrizki
+Kelas: XII TKJ
 
-## 🚀 Cara Menjalankan Proyek
-Cukup jalankan satu perintah ini di terminal:
-```bash
-docker-compose up --build
-```
+Sistem ini dibuat menggunakan arsitektur microservices yang dijalankan di dalam kontainer Docker.
 
+Daftar Service dan Port:
+- Frontend: Menggunakan Nginx di port 3000
+- Backend API: Node.js Express di port 8080
+- Database: PostgreSQL untuk simpan data user
+- Object Storage: MinIO di port 9000 untuk simpan file gambar
 
-## 🌐 Akses Layanan
-* **Frontend:** http://localhost:3000
-* **API Metadata:** http://localhost:8080/users
-* **MinIO Storage:** http://localhost:9000
+Cara Menjalankan:
+1. Pastikan docker dan docker-compose sudah terinstall di sistem.
+2. Masuk ke folder proyek.
+3. Jalankan perintah: docker-compose up --build
+4. Tunggu sampai semua log service muncul di terminal.
 
-## ✅ Fitur yang Tersedia
-1. **CRUD Lengkap:** Tambah, Tampil, Edit, dan Hapus data pengguna.
-2. **Validasi:** Peringatan "Opps! Email telah digunakan" jika email duplikat.
-3. **Persistensi:** Data tersimpan di PostgreSQL dan foto tersimpan di MinIO.
+Fitur:
+- CRUD User (Tambah, Tampil, Edit, Hapus).
+- Upload foto profil langsung ke MinIO.
+- Validasi email (tidak bisa input email yang sama).
+- Cek metadata JSON bisa di alamat: http://localhost:8080/users
