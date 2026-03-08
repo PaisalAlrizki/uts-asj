@@ -1,4 +1,5 @@
 Tugas UTS Administrasi Sistem Jaringan - Genap 2026
+
 Nama: Paisal Alrizki
 Kelas: XII TKJ
 
