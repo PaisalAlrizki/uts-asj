@@ -2,22 +2,21 @@ Tugas UTS Administrasi Sistem Jaringan - Genap 2026
 Nama: Paisal Alrizki
 Kelas: XII TKJ
 
-Sistem ini dibuat menggunakan arsitektur microservices yang dijalankan di dalam kontainer Docker.
+Sistem ini menggunakan arsitektur microservices yang dijalankan dengan Docker.
 
 Daftar Service dan Port:
-- Frontend: Menggunakan Nginx di port 3000
-- Backend API: Node.js Express di port 8080
-- Database: PostgreSQL untuk simpan data user
-- Object Storage: MinIO di port 9000 untuk simpan file gambar
+- Frontend: Nginx (Port 3000)
+- Backend API: Node.js Express (Port 8080)
+- Database: PostgreSQL
+- Object Storage: MinIO (Port 9000)
 
 Cara Menjalankan:
-1. Pastikan docker dan docker-compose sudah terinstall di sistem.
-2. Masuk ke folder proyek.
-3. Jalankan perintah: docker-compose up --build
-4. Tunggu sampai semua log service muncul di terminal.
+1. Pastikan docker-compose sudah terinstall.
+2. Jalankan perintah: docker-compose up --build
+3. Tunggu proses build dan start selesai.
 
 Fitur:
-- CRUD User (Tambah, Tampil, Edit, Hapus).
-- Upload foto profil langsung ke MinIO.
-- Validasi email (tidak bisa input email yang sama).
-- Cek metadata JSON bisa di alamat: http://localhost:8080/users
+- CRUD User (Create, Read, Update, Delete).
+- Upload foto profil ke MinIO storage.
+- Validasi email unik (pop-up error jika email sudah ada).
+- Cek metadata JSON: http://localhost:8080/users
